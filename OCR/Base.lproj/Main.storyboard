@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g88-9z-mOr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择图片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvq-Iu-ff8">
+                                <rect key="frame" x="16" y="72" width="343" height="55"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Al1-7D-hpH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.98702149500000003" green="1" blue="0.97785146830000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5JY-NZ-CP1">
+                                <rect key="frame" x="16" y="135" width="343" height="367"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzu-uu-G4O">
+                                <rect key="frame" x="39" y="555" width="113" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="FPl-Go-gQH"/>
+                                    <constraint firstAttribute="width" constant="113" id="lni-ua-FGk"/>
+                                </constraints>
+                                <state key="normal" title="拍照"/>
+                                <connections>
+                                    <action selector="cameraAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L1m-WN-ozy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilM-1C-jh0">
+                                <rect key="frame" x="222" y="555" width="113" height="74"/>
+                                <state key="normal" title="相册"/>
+                                <connections>
+                                    <action selector="photoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rp6-kG-GA6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qvq-Iu-ff8" firstAttribute="trailing" secondItem="5JY-NZ-CP1" secondAttribute="trailing" id="4hk-xF-b1D"/>
+                            <constraint firstItem="ilM-1C-jh0" firstAttribute="leading" secondItem="Hzu-uu-G4O" secondAttribute="trailing" constant="70" id="G9c-5K-eNy"/>
+                            <constraint firstItem="Hzu-uu-G4O" firstAttribute="top" secondItem="5JY-NZ-CP1" secondAttribute="bottom" constant="53" id="HTt-BI-WEB"/>
+                            <constraint firstItem="qvq-Iu-ff8" firstAttribute="leading" secondItem="5JY-NZ-CP1" secondAttribute="leading" id="MKY-Fz-iIU"/>
+                            <constraint firstItem="Hzu-uu-G4O" firstAttribute="top" secondItem="ilM-1C-jh0" secondAttribute="top" id="Rff-t6-nx2"/>
+                            <constraint firstItem="5JY-NZ-CP1" firstAttribute="top" secondItem="qvq-Iu-ff8" secondAttribute="bottom" constant="8" symbolic="YES" id="TuP-fl-tcN"/>
+                            <constraint firstItem="Hzu-uu-G4O" firstAttribute="baseline" secondItem="ilM-1C-jh0" secondAttribute="firstBaseline" id="XLb-4s-KvM"/>
+                            <constraint firstItem="Hzu-uu-G4O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="iOx-3d-Cob"/>
+                            <constraint firstItem="ilM-1C-jh0" firstAttribute="baseline" secondItem="Hzu-uu-G4O" secondAttribute="firstBaseline" id="iwk-BS-lhz"/>
+                            <constraint firstItem="qvq-Iu-ff8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="li2-UC-klI"/>
+                            <constraint firstItem="qvq-Iu-ff8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="n95-ei-sAM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ilM-1C-jh0" secondAttribute="trailing" constant="24" id="res-KS-6kB"/>
+                            <constraint firstItem="qvq-Iu-ff8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xhB-G5-Pha"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hzu-uu-G4O" secondAttribute="bottom" constant="38" id="zHk-Kk-QdH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sKO-qe-OUW"/>
+                    <connections>
+                        <outlet property="imgView" destination="5JY-NZ-CP1" id="UoJ-Tt-bW8"/>
+                        <outlet property="textLabel" destination="qvq-Iu-ff8" id="wkF-0E-eoC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.2" y="109.29535232383809"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zhb-KA-nZa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g88-9z-mOr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nej-BQ-36E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rF5-o0-P1g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Pk-XY-GRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="210" y="109"/>
+        </scene>
+    </scenes>
+</document>
